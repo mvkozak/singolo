@@ -717,6 +717,9 @@ footer {
     letter-spacing: -0.2px;
     color: #666d89;
 }
+footer .social-btn {
+    padding-top: 22px;
+}
 footer .social-btn-item:hover {
     border: 1px solid #fff;
    
