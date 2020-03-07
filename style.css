@@ -148,7 +148,7 @@ header {
     color: #666d89;
 }
 .our-services-content {
-    padding-top: 19px;
+    padding-top: 18px;
     font-size: 18px;
     font-weight: 300;
     font-stretch: normal;
@@ -164,7 +164,7 @@ header {
     flex-wrap: wrap;
     
     margin-left: 1px;
-    margin-top: 44px;
+    margin-top: 45px;
     
    
 }
@@ -203,7 +203,7 @@ header {
 
 .services-descr h3 {
     
-    font-size: 18px;
+    font-size: 18.5px;
     font-weight: 900;
     font-stretch: normal;
     font-style: normal;
