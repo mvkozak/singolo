@@ -3,11 +3,14 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     width: 100%;
 }
 header {
-    
+    width: 100%;
     height: 89px;
     
     background-color: #2d303a;
@@ -60,7 +63,7 @@ header {
     color:  #494e62;;
     
 } 
-.nav-menu li a {
+.nav-menu li a{
     text-decoration: none;
     font-size: 11.5px;
     font-weight: bold;
@@ -71,7 +74,14 @@ header {
     text-align: justify;
     color: #ffffff;
 }
-.menu-link:hover {
+/* .menu-link:hover {
+    color: #f06c64;
+} */
+.nav-menu li a.active {
+    color:#f06c64;
+}
+.nav-menu li a:not(.active):hover {
+    cursor: pointer;
     color: #f06c64;
 }
 .slider {
@@ -88,23 +98,58 @@ header {
     margin: 0 auto;
     
 }
-
-.slider-img:first-child {
-    position: absolute;
+.phone-vertical {
+    position: relative;
+    display:block;
     top: 53px;
-    left: 112px;
-    
-    
+    left: 72px;
 }
-.slider-img:last-child {
+
+/* .slider-img:first-child {
+    display: block;
+    position: relative;
+    
+    top: 53px;
+    left: 72px;
+    z-index: 5;
+    
+} */
+.display-vertical {
+    display:block;
+    position: absolute;
+    top:118px;
+    left: 126px;
+    width: 188px;
+    height: 333px;
+    background-color:black;
+    display: none;
+
+}
+.phone-horizontal {
     position: absolute;
     top: 174px;
     right: 111px;
 }
-.slider-arrows {
-    position: relative;
-    padding-top: 281px;
+.display-horizontal {
+    position: absolute;
+    top: 188px;
+    right: 202px;
+    width: 333px;
+    height: 188px;
+    background-color:black;
+    display:none;
 }
+.phone-off {
+    display: block;
+}
+
+/* 
+.slider-img:last-child {
+    position: absolute;
+   
+    
+} */
+
 .slider-arrows button {
     outline: none;
     background-color: transparent;
@@ -117,13 +162,18 @@ header {
     
 }
 .arrow-next{
-    
     float: right;
+    position: absolute;
+    top: 281px;
+    left: 962px;
     /* transform: rotate(180deg); */
     transform: scale(-1, 1);
+    
 }
 .arrow-prev{
     padding-left: 2px;
+    position: absolute;
+    top: 281px;
 }
 .services {
     
@@ -300,15 +350,20 @@ header {
     letter-spacing: normal;
     text-align: center;
     color: #767e9e;
+    cursor: pointer;
 
 }
+.buttons-group button .active-btn {
+    border: solid 1px #c5c5c5;
+    color: #c5c5c5;
+}
 
-
-.buttons-group button:hover {
+.buttons-group button:not(.active-btn):hover {
     border: solid 1px #c5c5c5;
     color: #c5c5c5;
     
 }
+
 .buttons-group button:focus {
     border: solid 1px #c5c5c5;
     color: #c5c5c5;
@@ -321,19 +376,29 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     
+    
 }
 .portfolio-content img {
-    padding-top: 19px;
+    margin-top: 19px;
     width: 220px;
     height: 187px;
     
 }
-.portfolio-content img:nth-child(n+5) {
+
+/* .portfolio-content img:nth-child(n+5) {
     padding-top: 20px;
-}
+} */
 .portfolio-content img:nth-child(n+13){
     display: none;
 }
+.portfolio-content .portfolio-border {
+    border: 5px solid #F06C64;
+}
+.my-shuffle {
+    position: relative;
+    overflow: hidden;
+}
+
 .about-us {
     height: 728px;
     background-color: #f2f2f2;
@@ -585,7 +650,7 @@ header {
 .form textarea:focus {
     outline: none;
 }
-.form .submit-input {
+/* .form .submit-input {
     margin-top: 16px;
     width: 150px;
     height: 30px;
@@ -596,7 +661,7 @@ header {
     border: 2px solid #f0d8d9;
     
    
-}
+} */
 .contact-info {
     padding-top: 44px;
     width: 301px;
@@ -724,3 +789,44 @@ footer .social-btn-item:hover {
     border: 1px solid #fff;
    
 } 
+/* .modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.modal-window {
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+    border-radius:5px;
+    background: #fff;
+    margin: 100px auto;
+
+} */
+#message-block {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;  
+    top:0;
+    left: 0;
+    background: #0008;
+}
+#message-block.hidden {
+    display: none;
+}
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid black;
+    text-align: center;
+    background:white;
+    
+}
+.text-message p {
+    font-size: 16px;
+    color:#000;
+}

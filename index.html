@@ -13,12 +13,12 @@
         <div class="header-content">
             <div class="header-logo"><a href="#"><h1>SINGOLO<span>*</span></h1></a></div>
             <nav class="navigation">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a class="menu-link" href="#">HOME</a></li>
-                    <li class="nav-item"><a class="menu-link" href="#">SERVICES</a></li>
-                    <li class="nav-item"><a class="menu-link" href="#">PORTFOLIO</a></li>
-                    <li class="nav-item"><a class="menu-link" href="#">ABOUT</a></li>
-                    <li class="nav-item"><a class="menu-link" href="#">CONTACT</a></li>
+                <ul id="menu" class="nav-menu">
+                    <li class="menu-link "><a class="active">HOME</a></li>
+                    <li class="menu-link"><a href="#services">SERVICES</a></li>
+                    <li class="menu-link"><a href="#portfolio">PORTFOLIO</a></li>
+                    <li class="menu-link"><a href="#about">ABOUT</a></li>
+                    <li class="menu-link"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
             
@@ -27,20 +27,36 @@
     <main>
         <section class="slider">
             <div class="slider-block">
-                <div class="slider-content">
-                    <div class="slider-img"><img src="./assets/img/iPhone_vertical.png" alt="iPhone-Vertical"></div>
-                    <div class="slider-img"><img src="./assets/img/iPhone_horizontal.png" alt="iPhone-Horizontal"></div>
+                
+              
+      
+                    
+                <div class="item slider-content">
+                    
+                  
+                   <img class="phone-vertical" id="iphone-vertical" src="./assets/img/iPhone_vertical.png" alt="iPhone">
+                   <div class="display-off display-vertical"></div>
+                   <img class="phone-horizontal" id="iphone-horizontal" src="./assets/img/iPhone_horizontal.png" alt="iPhone">
+                   <div class="display-off display-horizontal"></div>
+                </div>
+            
+                <div class="item slider-content">
+                    <img src="./assets/img/Slide-2.png" alt="Второй слайд" width="940" height="600">
                     
                 </div>
-                <div class="slider-arrows">
-                    <button class="arrow-prev"><img src="./assets/img/arrow.png" alt="arrow"></button>
-                    <button class="arrow-next"><img src="./assets/img/arrow.png" alt="arrow"></button>
+                        
+                <div class="slider-arrows"> 
+                    <button class="arrow-prev" onclick="minusSlide()"><img src="./assets/img/arrow.png" alt="arrow"></button>
+                    <button class="arrow-next" onclick="plusSlide()"><img src="./assets/img/arrow.png" alt="arrow"></button>
                 </div>
+                
+                  
+                
             </div>
             
  
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="services-content">
                 <div class="our-services">
                     <div class="our-services-caption">Our Services</div>
@@ -100,35 +116,35 @@
             
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="portfolio-block">
                 <h2 class="portfolio-header">Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <div class="buttons-group">
+                <div class="buttons-group js-item" id="img-tab">
                     <button>All</button>
                     <button>Web Design</button>
                     <button>Graphic Design</button>
                     <button>Artwork</button>
                 </div>
-                <div class="portfolio-content">
+                <div class="portfolio-content" id="portfolio-img">
                    
-                    <img src="./assets/img/1.jpg" alt="">
-                    <img src="./assets/img/2.jpg" alt="">
-                    <img src="./assets/img/3.jpg" alt="">
-                    <img src="./assets/img/4.jpg" alt="">
-                    <img src="./assets/img/5.jpg" alt="">
-                    <img src="./assets/img/6.jpg" alt="">
-                    <img src="./assets/img/7.jpg" alt="">
-                    <img src="./assets/img/8.jpg" alt="">
-                    <img src="./assets/img/9.jpg" alt="">
-                    <img src="./assets/img/10.jpg" alt="">
-                    <img src="./assets/img/11.jpg" alt="">
-                    <img src="./assets/img/12.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/1.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/2.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/3.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/4.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/5.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/6.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/7.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/8.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/9.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/10.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/11.jpg" alt="">
+                    <img id="image" class="image" src="./assets/img/12.jpg" alt="">
                 </div>
             </div>
             
         </section>
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="about-us-block">
                 <h2 class="about-header">About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -179,9 +195,9 @@
                     </div>
                 </div>
             </div>
-    
+       
         </section>
-        <section class="quote">
+        <section class="quote" id="contact">
             <div class="quote-block">
                 <h2 class="quote-header">Get a Quote</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -190,11 +206,29 @@
                         <form action="" class="form" method="POST">
                             <input type="text" name="name"  placeholder="Name (Requared)" required pattern="[a-zA-Zа-яА-ЯёЁ]+">
                             <input type="email" name="email" placeholder="Email (Requared)" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                            <input type="text" name="subject" placeholder="Subject">
-                            <textarea name="project" placeholder="Describe your project in detail..."></textarea>
-                            <input class="submit-input" type="submit" value="Submit">
+                            <input type="text" name="subject" placeholder="Subject" id="subject">
+                            <textarea name="project" placeholder="Describe your project in detail..." id="descr"></textarea>
+                            <!-- <input id="input-submit" class="submit-input" type="submit" value="Submit"> -->
+                          
+                            
                         </form>
+                        <button id="btn">Submit</button>
+                           
+                            <div class="hidden" id="message-block">
+                                <div id="message" class="text-message">
+                                    <span class="modal-title">Письмо отправлено</span>
+                                    <p><span id="result"></span> </p>
+                                    <br>
+                                    <p><span id="result-descr"></span></p>
+                                    <br>
+                                    <button id="close-btn">OK</button>
+                                </div>
+    
+                            </div>
                     </div>
+                    
+                    
+                
                     
                     <div class="contact-info">
                         <h3>Contact Information</h3>
@@ -224,5 +258,6 @@
         </div>
         
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
