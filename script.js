@@ -63,40 +63,39 @@ function imgsrc() {
     image.src ='./assets/img/' + imgs[++i];
   
 }*/
-/* Slider*/
-var slideIndex = 1;
-showSlides(slideIndex);
 
 
-function plusSlide() {
-    showSlides(slideIndex += 1);
-}
+let images = document.querySelectorAll('.item');
+let current = 0;
 
-function minusSlide() {
-    showSlides(slideIndex -= 1);  
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("item");
-    
-    if (n > slides.length) {
-      slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+function slider() {
+    for (let i = 0; i < images.length; i++) {
+        images[i].classList.add('opacity0');
+        
     }
     
-    slides[slideIndex - 1].style.display = "block";
+    images[current].classList.remove('opacity0');
+
 
 }
+
+document.querySelector('.arrow-next').onclick = function() {
+    if (current - 1 == -1) {
+        current = images.length - 1;
+    } else {
+        current--;
+    }
+    slider();
+}
+document.querySelector('.arrow-prev').onclick = function() {
+    if (current + 1 == images.length) {
+        current = 0;
+    } else {
+        current++;
+    }
+    slider();
+
+};
 
 // const BUTTON = document.getElementById('btn');
 const CLOSE_BUTTON = document.getElementById('close-btn');
